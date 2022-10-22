@@ -6,7 +6,9 @@
 }
 .uilib-selector {
     position: relative;
-    display: inline-block
+    display: inline-block;
+    width: 150px;
+    cursor: default;
 }
 .uilib-selector .selected,
 .uilib-selector ul {
@@ -18,18 +20,25 @@
     align-items: center;
     height: 40px;
     padding: 0 15px;
-    width: 150px;
 }
 .uilib-selector .selected span {
     flex-grow: 1;
 }
-.uilib-selector .selected svg {
-    width: 25px;
+.uilib-selector .selected i {
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
 }
-
 .uilib-selector ul {
     position: absolute;
     width: 100%;
+    display: none;
+}
+.uilib-selector.open .selected i {
+    transform: rotate(180deg);
+}
+.uilib-selector.open ul {
     display: block;
 }
 .uilib-selector ul li {
@@ -37,4 +46,7 @@
     align-items: center;
     height: 30px;
     padding: 0 15px;
+}
+.uilib-selector ul li:hover {
+    background-color: #F7F7F7;
 }
