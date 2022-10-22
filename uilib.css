@@ -1,0 +1,40 @@
+.uilib * {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.uilib-selector {
+    position: relative;
+    display: inline-block
+}
+.uilib-selector .selected,
+.uilib-selector ul {
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+}
+.uilib-selector .selected {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 15px;
+    width: 150px;
+}
+.uilib-selector .selected span {
+    flex-grow: 1;
+}
+.uilib-selector .selected svg {
+    width: 25px;
+}
+
+.uilib-selector ul {
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+.uilib-selector ul li {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 15px;
+}
