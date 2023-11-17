@@ -58,7 +58,8 @@ function initSelections() {
     const selects = $("select.uilib");
     selects.each(function() {
         const dom = new Select($(this))
-        $(this).replaceWith(dom.dom)
+        $(this).hide()
+        $(dom.dom).insertAfter($(this))
     })
 }
 

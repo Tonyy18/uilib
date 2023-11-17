@@ -7,6 +7,15 @@
     <script src="uilib.js"></script>
 </head>
 <body>
-
+    <select class="uilib" id="test">
+        <option value="option">option</option>
+        <option value="option2">option2</option>
+        <option value="option3">option3</option>
+    </select>
+    <script>
+        $("#test").change(function() {
+            alert($(this).val())
+        })
+    </script>
 </body>
 </html>
