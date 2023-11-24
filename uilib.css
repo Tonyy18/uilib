@@ -1,8 +1,13 @@
-.uilib * {
+
+.uilib, .uilib * {
     padding: 0px;
     margin: 0px;
     font-size: 14px;
     box-sizing: border-box;
+    outline: none;
+}
+.uilib {
+    vertical-align: middle;
 }
 .uilib-selector {
     position: relative;
@@ -12,8 +17,8 @@
 }
 .uilib-selector .selected,
 .uilib-selector ul {
-    border: 1px solid #CECECE;
-    border-radius: 3px;
+    z-index: 1000;
+    background-color: white;
 }
 .uilib-selector .selected {
     display: flex;
@@ -49,4 +54,21 @@
 }
 .uilib-selector ul li:hover {
     background-color: #F7F7F7;
+}
+
+.uilib-input,
+.uilib-selector .selected,
+.uilib-selector ul {
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+}
+
+.uilib-input:hover,
+.uilib-input:focus {
+    border: 1px solid #5A5A5A;
+}
+
+.uilib-input {
+    padding: 0px 15px;
+    height: 40px;
 }
